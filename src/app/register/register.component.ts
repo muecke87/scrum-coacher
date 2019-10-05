@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+
+  roles = ['Scrum Coach', 'Projektanbieter'];
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
