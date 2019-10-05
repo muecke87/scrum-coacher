@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
-
   roles = ['Scrum Coach', 'Projektanbieter'];
   constructor() { }
 
