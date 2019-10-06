@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {RegisterService} from "../register.service";
+import {UserService} from "../user.service";
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -16,7 +17,7 @@ export class RegisterComponent implements OnInit {
   };
   roles = ['Scrum Coach', 'Projektanbieter'];
 
-  constructor(private fb: FormBuilder, private registerService: RegisterService) {
+  constructor(private fb: FormBuilder, private userService: UserService, private router: Router) {
   }
 
   ngOnInit() {
@@ -25,6 +26,7 @@ export class RegisterComponent implements OnInit {
 
   register(user) {
     console.log("user " + user);
-    this.registerService.register(user);
+    this.userService.register(user);
+    this.router.navigate(['/user', this.user]);
   }
 }

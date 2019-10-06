@@ -4,7 +4,7 @@ import {HttpClient} from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
-export class RegisterService {
+export class UserService {
 
   uri = 'http://localhost:4000/user';
 
@@ -13,6 +13,12 @@ export class RegisterService {
   register(user) {
     console.log(user);
     this.http.post(`${this.uri}/register`, user)
-      .subscribe(res => console.log('Done'));
+      .subscribe(res => console.log('Done '));
+  }
+
+  get() {
+    return this
+      .http
+      .get(`${this.uri}`);
   }
 }

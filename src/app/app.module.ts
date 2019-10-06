@@ -10,13 +10,15 @@ import { RegisterComponent } from './register/register.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
-import {RegisterService} from "./register.service";
+import {UserService} from "./user.service";
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,7 @@ import {RegisterService} from "./register.service";
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [RegisterService],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
