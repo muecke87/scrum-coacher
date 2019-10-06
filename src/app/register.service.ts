@@ -6,19 +6,13 @@ import {HttpClient} from "@angular/common/http";
 })
 export class RegisterService {
 
-  uri = 'http://localhost:4000/register';
+  uri = 'http://localhost:4000/user';
 
   constructor(private http: HttpClient) { }
 
   register(user) {
     console.log(user);
     this.http.post(`${this.uri}/register`, user)
-      .subscribe(res => console.log('Done'));
-  }
-
-  private alreadyExists(user) {
-    console.log(user);
-    this.http.get(`${this.uri}/register?`, user)
       .subscribe(res => console.log('Done'));
   }
 }
