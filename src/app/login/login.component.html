@@ -1,21 +1,21 @@
 <div class="login">
   <mat-card class="box">
     <mat-card-header>
-      <mat-card-title>Login</mat-card-title>
+      <mat-card-title>Einloggen</mat-card-title>
     </mat-card-header>
 
     <form class="form">
 
       <mat-card-content>
         <mat-form-field class="full-width">
-          <input matInput placeholder="Benutzername">
+          <input matInput placeholder="Benutzername" [(ngModel)]="user.name" name="name">
         </mat-form-field>
 
         <mat-form-field class="full-width">
-          <input matInput type="password" placeholder="Passwort">
+          <input matInput type="password" placeholder="Passwort" [(ngModel)]="user.password" name="password">
         </mat-form-field>
       </mat-card-content>
-      <button mat-stroked-button class="button">Login</button>
+      <button mat-stroked-button class="button" (click)="login(user)">Einloggen</button>
     </form>
   </mat-card>
 </div>
