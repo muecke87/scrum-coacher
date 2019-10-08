@@ -1,5 +1,8 @@
 # ScrumCoacher
 
+This project will be used as an example application for teaching module "426 - Software mit agilen Methoden entwickeln".
+It contains parts from several online tutorials.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
 
 ## Development server
